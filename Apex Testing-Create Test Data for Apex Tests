@@ -1,0 +1,31 @@
+Dale en comenzar en tu org
+Te vas en ajustes y le das clic a Developer Console(Consola de programador)
+
+y copias este codigo 
+---------------------------------------------------------------------------------------------------------------
+public class RandomContactFactory {
+
+    public static List<Contact> generateRandomContacts(Integer numContactsToGenerate, String commonLastName) {
+        List<Contact> contactList = new List<Contact>();
+
+        for (Integer i = 0; i < numContactsToGenerate; i++) {
+            Contact c = new Contact(
+                FirstName = commonLastName + ' ' + i,
+                LastName = 'Contact' + i
+            );
+            contactList.add(c);
+            System.debug(c);
+        }
+
+        insert contactList;
+
+        System.debug('Number of contacts inserted: ' + contactList.size());
+        return contactList;
+    }
+}
+-------------------------------------------------------------------------------------------------------------------
+
+para finalizar le das cntrl + S 
+una vez guardado el avanze le das clic a la opcion de TEST
+y te vas a la opcion de RUN ALL y listo
+
